@@ -16,7 +16,7 @@ class PedidoController extends Controller
      */
     public function index()
     {
-        if(!Auth::user()->is_admin){
+        if(!Auth::user()->admin){
             return response()->json(
                 [
                     'meessage'=>'Inautorizado'
